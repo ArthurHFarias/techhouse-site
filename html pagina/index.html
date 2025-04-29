@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechHouse - Segurança Residencial Inteligente</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .animate-fade-in {
+            animation: fadeIn 1s ease-out forwards;
+        }
+        
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+        
+        .gradient-text {
+            background: linear-gradient(90deg, #3b82f6, #10b981);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .transition-all {
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Barra de navegação -->
+    <nav class="fixed w-full bg-gray-900 text-white shadow-lg z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-shield-alt text-blue-400 text-2xl"></i>
+                <a href="#home" class="text-xl font-bold hover:text-blue-400 transition-all">Tech<span class="text-blue-400">House</span></a>
+            </div>
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="hover:text-blue-400 transition-all">Início</a>
+                <a href="#about" class="hover:text-blue-400 transition-all">Sobre</a>
+                <a href="#features" class="hover:text-blue-400 transition-all">Funcionalidades</a>
+                <a href="#differentials" class="hover:text-blue-400 transition-all">Diferenciais</a>
+                <a href="#contact" class="hover:text-blue-400 transition-all">Contato</a>
+            </div>
+            
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- Menu mobile -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800 px-4 py-2">
+            <a href="#home" class="block py-2 hover:text-blue-400 transition-all">Início</a>
+            <a href="#about" class="block py-2 hover:text-blue-400 transition-all">Sobre</a>
+            <a href="#features" class="block py-2 hover:text-blue-400 transition-all">Funcionalidades</a>
+            <a href="#differentials" class="block py-2 hover:text-blue-400 transition-all">Diferenciais</a>
+            <a href="#contact" class="block py-2 hover:text-blue-400 transition-all">Contato</a>
+        </div>
+    </nav>
+    
+    <!-- Seção Home -->
+    <section id="home" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 to-gray-800 text-white pt-16">
+        <div class="container mx-auto px-4 py-20 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0 animate-fade-in">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">Tech<span class="gradient-text">House</span></h1>
+                <p class="text-xl md:text-2xl mb-8 text-gray-300">A segurança do futuro começa hoje</p>
+                <p class="text-lg mb-8 text-gray-300">Sistema de segurança residencial inteligente com IA, câmeras e respostas automáticas para proteger o que mais importa.</p>
+                <div class="flex space-x-4">
+                    <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-medium transition-all">Solicitar Demonstração</a>
+                    <a href="#features" class="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-6 py-3 rounded-full font-medium transition-all">Saiba Mais</a>
+                </div>
+            </div>
+            
+            <div class="md:w-1/2 animate-fade-in delay-200">
+                <img src="https://images.unsplash.com/photo-1558002038-1055907df827?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                     alt="Casa inteligente conectada" 
+                     class="rounded-xl shadow-2xl w-full h-auto object-cover">
+            </div>
+        </div>
+    </section>
+    
+    <!-- Seção Sobre -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Sobre o <span class="gradient-text">Projeto</span></h2>
+                <div class="w-20 h-1 bg-blue-500 mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 animate-fade-in">
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Equipe TechHouse" 
+                         class="rounded-xl shadow-lg w-full h-auto object-cover">
+                </div>
+                
+                <div class="md:w-1/2 md:pl-12 animate-fade-in delay-200">
+                    <h3 class="text-2xl font-bold mb-6">O que é a TechHouse?</h3>
+                    <p class="text-gray-600 mb-6">A TechHouse é um sistema de segurança residencial inteligente desenvolvido por jovens talentos do SENAC, combinando tecnologia de ponta com acessibilidade para proteger seu lar.</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="fas fa-brain text-blue-500 text-xl mt-1 mr-4"></i>
+                            <div>
+                                <h4 class="font-bold">Inteligência Artificial Avançada</h4>
+                                <p class="text-gray-600">Nossa IA identifica padrões suspeitos e ameaças em tempo real, aprendendo com o comportamento normal da sua residência.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <i class="fas fa-bolt text-blue-500 text-xl mt-1 mr-4"></i>
+                            <div>
+                                <h4 class="font-bold">Resposta Automática</h4>
+                                <p class="text-gray-600">O sistema age automaticamente diante de perigos, acionando alarmes, notificando autoridades e gravando evidências.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <i class="fas fa-users text-blue-500 text-xl mt-1 mr-4"></i>
+                            <div>
+                                <h4 class="font-bold">Desenvolvido no Brasil</h4>
+                                <p class="text-gray-600">Criado por estudantes brasileiros, com suporte local e adaptado às necessidades específicas do nosso mercado.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Seção Funcionalidades -->
+    <section id="features" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Nossas <span class="gradient-text">Funcionalidades</span></h2>
+                <div class="w-20 h-1 bg-blue-500 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-all card-hover animate-fade-in">
+                    <div class="text-blue-500 mb-4">
+                        <i class="fas fa-video text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Monitoramento por Câmeras</h3>
+                    <p class="text-gray-600">Câmeras HD com visão noturna e reconhecimento facial para identificar visitantes e potenciais ameaças.</p>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-all card-hover animate-fade-in delay-100">
+                    <div class="text-blue-500 mb-4">
+                        <i class="fas fa-robot text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Resposta Automática</h3>
+                    <p class="text-gray-600">Sistema inteligente que age automaticamente em situações de perigo, sem necessidade de intervenção humana.</p>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-all card-hover animate-fade-in delay-200">
+                    <div class="text-blue-500 mb-4">
+                        <i class="fas fa-mobile-alt text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Aplicativo de Controle</h3>
+                    <p class="text-gray-600">Controle total da sua segurança pelo smartphone, com notificações em tempo real e histórico de eventos.</p>
+                </div>
+                
+                <!-- Card 4 -->
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-all card-hover animate-fade-in delay-300">
+                    <div class="text-blue-500 mb-4">
+                        <i class="fas fa-network-wired text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Integração com IoT</h3>
+                    <p class="text-gray-600">Conecte-se com outros dispositivos inteligentes da sua casa para criar um ecossistema de segurança completo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Seção Diferenciais -->
+    <section id="differentials" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Nossos <span class="gradient-text">Diferenciais</span></h2>
+                <div class="w-20 h-1 bg-blue-500 mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 animate-fade-in">
+                    <div class="bg-gray-100 p-8 rounded-xl">
+                        <div class="flex items-center mb-6">
+                            <div class="bg-blue-500 text-white p-3 rounded-full mr-4">
+                                <i class="fas fa-paint-brush text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold">Design Moderno</h3>
+                        </div>
+                        <p class="text-gray-600 mb-8">Equipamentos com design discreto e elegante que se integram perfeitamente à decoração da sua casa, sem parecer um sistema de segurança tradicional.</p>
+                        
+                        <div class="flex items-center mb-6">
+                            <div class="bg-blue-500 text-white p-3 rounded-full mr-4">
+                                <i class="fas fa-headset text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold">Suporte Local</h3>
+                        </div>
+                        <p class="text-gray-600 mb-8">Equipe de suporte brasileira disponível 24/7 para auxiliar com qualquer dúvida ou problema, com atendimento personalizado em português.</p>
+                        
+                        <div class="flex items-center">
+                            <div class="bg-blue-500 text-white p-3 rounded-full mr-4">
+                                <i class="fas fa-expand text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold">Escalável e Adaptável</h3>
+                        </div>
+                        <p class="text-gray-600">Sistema modular que cresce com suas necessidades, podendo ser instalado em apartamentos pequenos ou grandes residências com a mesma eficiência.</p>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2 md:pl-12 animate-fade-in delay-200">
+                    <img src="https://images.unsplash.com/photo-1558002038-1055907df827?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Diferenciais TechHouse" 
+                         class="rounded-xl shadow-lg w-full h-auto object-cover">
+                    
+                    <div class="mt-8 bg-blue-50 p-6 rounded-xl border border-blue-100">
+                        <h3 class="text-xl font-bold mb-4 text-blue-800">Por que escolher a TechHouse?</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                                <span class="text-gray-700">Tecnologia de ponta a preços acessíveis</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                                <span class="text-gray-700">Desenvolvido pensando na realidade brasileira</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                                <span class="text-gray-700">Atualizações constantes sem custo adicional</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                                <span class="text-gray-700">Privacidade garantida - seus dados são seus</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Seção Contato -->
+    <section id="contact" class="py-20 bg-gray-900 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Entre em <span class="gradient-text">Contato</span></h2>
+                <div class="w-20 h-1 bg-blue-500 mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-10 md:mb-0 animate-fade-in">
+                    <h3 class="text-2xl font-bold mb-6">Fale conosco</h3>
+                    <p class="text-gray-300 mb-8">Tem dúvidas sobre nosso sistema? Quer solicitar uma demonstração? Preencha o formulário ao lado que nossa equipe entrará em contato em breve.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-blue-400 text-xl mt-1 mr-4"></i>
+                            <div>
+                                <h4 class="font-bold">Endereço</h4>
+                                <p class="text-gray-300">SENAC São Paulo, Brasil</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <i class="fas fa-envelope text-blue-400 text-xl mt-1 mr-4"></i>
+                            <div>
+                                <h4 class="font-bold">Email</h4>
+                                <p class="text-gray-300">contato@techhouse.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <i class="fas fa-phone-alt text-blue-400 text-xl mt-1 mr-4"></i>
+                            <div>
+                                <h4 class="font-bold">Telefone</h4>
+                                <p class="text-gray-300">(11) 1234-5678</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-10">
+                        <h4 class="font-bold mb-4">Siga-nos nas redes sociais</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-blue-600 hover:bg-blue-700 w-10 h-10 rounded-full flex items-center justify-center transition-all">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="bg-blue-400 hover:bg-blue-500 w-10 h-10 rounded-full flex items-center justify-center transition-all">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="bg-pink-600 hover:bg-pink-700 w-10 h-10 rounded-full flex items-center justify-center transition-all">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="bg-blue-700 hover:bg-blue-800 w-10 h-10 rounded-full flex items-center justify-center transition-all">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2 md:pl-12 animate-fade-in delay-200">
+                    <form id="contact-form" class="bg-gray-800 p-8 rounded-xl shadow-lg">
+                        <div class="mb-6">
+                            <label for="name" class="block text-gray-300 mb-2">Seu nome</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-white" required>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="email" class="block text-gray-300 mb-2">Seu email</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-white" required>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-300 mb-2">Sua mensagem</label>
+                            <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-white" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg font-medium transition-all">
+                            Enviar Mensagem
+                        </button>
+                    </form>
+                    
+                    <div id="form-success" class="hidden mt-4 bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative">
+                        <strong class="font-bold">Sucesso!</strong>
+                        <span class="block sm:inline">Sua mensagem foi enviada. Entraremos em contato em breve.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Rodapé -->
+    <footer class="bg-gray-800 text-gray-300 py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-shield-alt text-blue-400 text-2xl"></i>
+                        <span class="text-xl font-bold">Tech<span class="text-blue-400">House</span></span>
+                    </div>
+                    <p class="text-sm mt-2">A segurança do futuro começa hoje</p>
+                </div>
+                
+                <div class="text-sm text-center md:text-right">
+                    <p>&copy; 2023 TechHouse. Todos os direitos reservados.</p>
+                    <p class="mt-1">Desenvolvido por alunos do SENAC</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Menu mobile
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+        
+        // Formulário de contato
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Simular envio do formulário
+            setTimeout(function() {
+                document.getElementById('contact-form').reset();
+                document.getElementById('form-success').classList.remove('hidden');
+                
+                // Esconder mensagem de sucesso após 5 segundos
+                setTimeout(function() {
+                    document.getElementById('form-success').classList.add('hidden');
+                }, 5000);
+            }, 1000);
+        });
+        
+        // Scroll suave para links internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Fechar menu mobile se aberto
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                }
+            });
+        });
+        
+        // Adicionar classe de animação quando os elementos entram na viewport
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+        
+        document.querySelectorAll('.animate-fade-in').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
